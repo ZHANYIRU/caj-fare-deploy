@@ -2,9 +2,10 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: apply-manifests
+  namespace: user13
 spec:
   workspaces:
-  - name: source
+    - name: source
   params:
     - name: manifest_dir
       description: The directory in source that contains yaml manifests

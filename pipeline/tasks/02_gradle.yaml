@@ -2,6 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: gradle
+  namespace: user13
 spec:
   description: >-
     This Task can be used to run a Gradle build.
@@ -21,7 +22,7 @@ spec:
       type: string
       default: "."
     - name: TASKS
-      description: 'The gradle tasks to run (default: build)'
+      description: "The gradle tasks to run (default: build)"
       type: array
       default:
         - build
